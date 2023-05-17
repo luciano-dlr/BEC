@@ -1,7 +1,6 @@
 
 let students = ["messi", "Neymar"]
 
-
 function addAge (jugadores =[], edad = 30){ 
     return jugadores.map (jugador => {
 
@@ -14,9 +13,10 @@ function addAge (jugadores =[], edad = 30){
 console.log(addAge(students))
 
 
-
 //ejemplo .map
 let elDoble = num => num * 2 ;
+
+
 
 //forma junior
 // console.log(`el doble de 4 es ${elDoble(4)})

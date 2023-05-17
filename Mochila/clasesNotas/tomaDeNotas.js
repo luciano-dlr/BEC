@@ -16,6 +16,7 @@ const tareas = [
 
 console.log('Respuesta ejercicio 1 ')
 const tareasPendientes = tareas
+
     .filter(tarea => tarea.completada === false)
     .map(tarea => tarea.descripcion.toLocaleUpperCase())
     .forEach(descripcion => console.log(descripcion))
@@ -64,7 +65,7 @@ let total = numeros.reduce((prev,current,i) =>{
 
 // 3) Cuantas tareas hay completadas?
 
-const tareasCompletadasCount = tareas.reduce((prev,current,i)=> current.completada === true ? prev + 1 : prev,0)
+const tareasCompletadasCount = tareas.reduce((prev,current,i)=> current.completada === true ? prev + 1 : prev,0);
 
 console.log(`Las tareas completadas son ${tareasCompletadasCount}`)
 

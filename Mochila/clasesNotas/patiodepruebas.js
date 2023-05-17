@@ -35,5 +35,17 @@ class ProductManager {
 
 
 
+// el cri trabeo con comer sano 12 de mayo por festejo laburo amarillo 
+
+//  let cagon = cristian.reduce((sano,estudios) => {
+
+//  const juntada = estudios % sano 
+
+//  return juntada ;
+
+// })
+
+
+
 
 
