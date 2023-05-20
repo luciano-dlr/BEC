@@ -1,3 +1,4 @@
+const { error } = require("console");
 const fs = require("fs");
 
 
@@ -51,6 +52,8 @@ class ProductManager {
             const read = await fs.promises.readFile(this.path, 'utf8');
 
              console.log('Estos son todos los productos', read);
+
+             if(read.length=== -1) throw error ('el archivo esta vacio', read)
             
 
              return read;
@@ -184,17 +187,17 @@ const nuevoProducto = new ProductManager();
 // stock:25
 
 
-// nuevoProducto.addProducto({
-//   nombre: "producto prueba",
-//   description: "Este es un producto prueba",
-//   price:200,
-//   thumbnail:"Sin imagen",
-//   code:"abc123",
-//   stock:25
-// });
+nuevoProducto.addProducto({
+  nombre: "producto prueba",
+  description: "Este es un producto prueba",
+  price:200,
+  thumbnail:"Sin imagen",
+  code:"abc123",
+  stock:25
+});
 
 
-// console.log(nuevoProducto);
+console.log(nuevoProducto);
 
 // 4 ) El objeto debe agregarse satisfactoriamente con un id generado automáticamente SIN REPETIRSE
 
