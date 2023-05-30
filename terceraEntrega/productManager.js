@@ -7,8 +7,6 @@ import fs from "fs";
 export class ProductManager {
 
     constructor(){
-        // this.products = []
-        // this.id = 0
         this.path = "./path/path.json"
     }
 
