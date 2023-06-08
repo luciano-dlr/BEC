@@ -6,36 +6,35 @@ const cors = require("cors");
 const bodyParser = require('body-parser');
 
 class Server {
-  constructor(){
+  constructor() {
     this.app = express();
     this.settings();
     this.middleware();
     this.routes();
   }
 
-  settings(){
+  settings() {
     this.app.use(bodyParser.json());
-    this.app.use(bodyParser.urlencoded({ extended: true }));
     this.app.use("/francisco", express.static(`${__dirname}/public`));
   }
 
-  middleware(){
+  middleware() {
     this.app.use(cors('*'));
-    this.app.use((req, res, next)=>{
-      // res.send("No estas admitido!!");
+    this.app.use((req, res, next) => {
       console.log("En mi middleware a nivel de app!");
-      next()
-    })
+      next();
+    });
   }
 
-  routes(){
+  routes() {
     routes(this.app);
   }
 
-  listen(){
-    this.app.listen(PORT, ()=> {console.log(`http://localhost:${PORT}`)});
+  listen() {
+    this.app.listen(PORT, () => {
+      console.log(`http://localhost:${PORT}`);
+    });
   }
 }
-
 module.exports = new Server();
 

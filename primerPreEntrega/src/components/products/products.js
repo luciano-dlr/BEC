@@ -1,12 +1,11 @@
 const { Router } = require("express");
 const { ProductManager } = require("./productManager/productManager");
-const bodyParser = require('body-parser');
+
 
 const nuevoProducto = new ProductManager();
 
 module.exports = function (app) {
   let router = Router();
-  app.use(bodyParser.json());
 
   app.use("/api", router);
 
